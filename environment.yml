@@ -1,0 +1,8 @@
+name: RL101
+channels:
+  - conda-forge
+dependencies:
+  - transformers=4.21.2
+  - fastapi=0.78.0
+  - tensorflow==2.9.1
+  - uvicorn[standard]
