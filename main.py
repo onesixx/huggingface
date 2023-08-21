@@ -41,7 +41,11 @@ def extract_from_url(url):
     return text
 
 def process(text):
+<<<<<<< HEAD
     summarizer = pipeline("summarization", model='t5-base', tokenizer='t5-base', truncation=True, framework="tf")
+=======
+    summarizer = pipeline("summarization", model='t5-small', tokenizer='t5-base', truncation=True, framework="tf")
+>>>>>>> d9526b166f0c810092079359184fd24ea754d6d8
     result = summarizer(text, min_length=180, truncation=True)
     return result[0]['summary_text']
 
@@ -49,7 +53,18 @@ def process(text):
 def summarize(request: SummarizeRequest):
     url = request.url
     text = extract_from_url(url)
+<<<<<<< HEAD
     return Response(text) 
+=======
+    # if url:
+    #     text = extract_from_url(url)
+    # elif file:
+    #     with open(file, 'r') as f: 
+    #         text = f.read()
+    # else:
+    #     raise Exception('No input provided')
+    return process(text)
+>>>>>>> d9526b166f0c810092079359184fd24ea754d6d8
 
 
 @app.get("/")
