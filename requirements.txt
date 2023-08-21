@@ -1,9 +1,5 @@
 transformers==4.21.2
 tensorflow==2.9.1
-<<<<<<< HEAD
-
-=======
->>>>>>> d9526b166f0c810092079359184fd24ea754d6d8
 fastapi==0.78.0
 uvicorn[standard]
 bs4==0.0.1
